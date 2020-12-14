@@ -6,7 +6,9 @@ var track = null;
 const cameraView = document.querySelector("#camera--view"),
     cameraOutput = document.querySelector("#camera--output"),
     cameraSensor = document.querySelector("#camera--sensor"),
-    cameraTrigger = document.querySelector("#camera--trigger");
+    cameraTrigger = document.querySelector("#camera--trigger"),
+cameraStartButton = document.getElementbyId("#camera--start"),
+      cameraStartButton = document.getElementbyId("#camera--stop");
 
 // Access the device camera and stream to cameraView
 function cameraStart() {
@@ -20,6 +22,15 @@ function cameraStart() {
             console.error("Oops. Something is broken.", error);
         });
 }
+// Take a picture when cameraTrigger is tapped
+cameraStartButton.onclick = function() {
+cameraStart();
+}
+
+// Take a picture when cameraTrigger is tapped
+cameraStopButton.onclick = function() {
+ track.stop();
+}
 
 // Take a picture when cameraTrigger is tapped
 cameraTrigger.onclick = function() {
@@ -32,4 +43,4 @@ cameraTrigger.onclick = function() {
 };
 
 // Start the video stream when the window loads
-window.addEventListener("load", cameraStart, false);
+//window.addEventListener("load", cameraStart, false);
