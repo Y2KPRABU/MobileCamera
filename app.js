@@ -7,8 +7,8 @@ const cameraView = document.querySelector("#camera--view"),
     cameraOutput = document.querySelector("#camera--output"),
     cameraSensor = document.querySelector("#camera--sensor"),
     cameraTrigger = document.querySelector("#camera--trigger"),
-cameraStartButton = document.getElementbyId("#camera--start"),
-      cameraStartButton = document.getElementbyId("#camera--stop");
+cameraStartButton = document.querySelector("#camera--start"),
+      cameraStopButton = document.querySelector("#camera--stop");
 
 // Access the device camera and stream to cameraView
 function cameraStart() {
