@@ -1,2 +1,2 @@
-# MobileCamera
-A simple HTML5 App to capture camera from a mobile browser not from a mobile app
+# camera-app
+Super awesome camera web app built with HTML, CSS, and JS.
